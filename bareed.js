@@ -139,7 +139,7 @@ class Customer extends Person {
     this.wallet.money >= numberOfIceCreams * vendor.price;
   requestIceCream = (vendor, numberOfIceCreams) => {
     this._isInRange(vendor) && this._haveEnoughMoney(vendor, numberOfIceCreams)
-      ? vendor.sellTo(this.customer, numberOfIceCreams)
+      ? vendor.sellTo(this, numberOfIceCreams)
       : "Sorry you are either to far, or can not afford my expensive icecream";
   };
 }
